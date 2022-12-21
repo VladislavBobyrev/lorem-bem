@@ -1,0 +1,64 @@
+@import '../style/utils/normalize';
+@import '../style/utils/root_dark';
+@import '../style/utils/vriable';
+@import '../style/utils/z-index';
+@import '../style/utils/scroll';
+@import '../style/components/button';
+@import '../style/components/section';
+@import '../style/components/header';
+@import '../style/components/burger';
+@import '../style/components/banner';
+@import '../style/components/registration';
+@import '../style/components/form';
+@import '../style/components/chose';
+@import '../style/components/footer';
+
+.app {
+  padding: 0;
+  width: 100%;
+  height: calc(var(--vh) * 100);
+  min-height: stretch;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1166px;
+  margin: 0 auto;
+}
+
+.visualy-hidden {
+  position: absolute;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.text-light {
+  color: $light;
+}
+
+.text-accent {
+  color: $brand;
+}
+
+@media all and (max-width: 1200px) {
+  .wrapper {
+    max-width: calc(100% - 2rem);
+  }
+}
+@media all and (min-width: 768px) {
+  .hidden-pc {
+    display: none;
+  }
+}
+@media all and (max-width: 560px) {
+  .html {
+    font-size: 14px;
+  }
+}

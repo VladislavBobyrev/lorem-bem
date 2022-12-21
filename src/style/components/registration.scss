@@ -1,0 +1,89 @@
+.registration {
+  padding: 121px 0 151px;
+  background: $basic_100;
+  background-position: center;
+
+  @media all and (min-width: 768px) {
+    background-image: url('/public/images/map.png');
+  }
+  @media all and (max-width: 768px) {
+    background-image: url('/public/images/map-small.png');
+  }
+}
+
+.registration-wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.registration__slide {
+  padding-right: 30px;
+  width: 239px !important;
+}
+
+.icon-svg {
+  padding: 23px;
+  width: 100px;
+  height: 100px;
+}
+
+.svg {
+  width: 100%;
+  height: 100%;
+  color: currentcolor;
+}
+
+.registration__slide-icon {
+  position: relative;
+  padding: 0 10.5px;
+  margin: auto auto 20px;
+  border: 5px solid $icon_border;
+  border-radius: 100%;
+  background: $brand;
+}
+
+.registration-swiper {
+  margin: auto;
+  margin-bottom: 80px;
+  overflow: hidden;
+
+  @media all and (max-width: 1200px) {
+    width: 968px;
+  }
+  @media all and (max-width: 992px) {
+    width: 720px;
+  }
+  @media all and (max-width: 768px) {
+    width: 480px;
+  }
+  @media all and (max-width: 540px) {
+    width: 290px;
+  }
+}
+
+.registration__slide-text {
+  text-align: center;
+  line-height: 19px;
+  color: $light;
+}
+
+.slider-dots {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: calc(107px + 5px);
+  justify-content: space-between;
+
+  // left: calc(100% + 5px + 0.625vw);
+  // width: 5.7292vw;
+  width: 110px;
+  height: 10px;
+}
+
+.slider-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $dot;
+}

@@ -1,0 +1,132 @@
+.form-data {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-auto-flow: dense;
+  margin-bottom: 55px;
+  border: 0;
+  gap: 30px;
+}
+
+.progress-custom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-column: auto/ 2 span;
+
+  @media all and (max-width: 768px) {
+    grid-column: auto/ 1 span;
+  }
+}
+
+.input-custom {
+  padding: 12px 10px;
+  width: 100%;
+  height: 48px;
+  border: 1px solid $light;
+  border-radius: 3px;
+  background: $select_bg;
+  font-size: 18px;
+  line-height: 22px;
+  color: $basic_100;
+
+  &::placeholder {
+    opacity: 1;
+    color: $basic_100;
+  }
+}
+
+.progress {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  border: 1px solid #FFF;
+  border-radius: 3px;
+  background: rgb(255 255 255 / 70%);
+  appearance: none;
+}
+
+.progress ::-webkit-slider-runnable-track,
+.progress ::-moz-range-track {
+  height: 6px;
+  background-color: rgb(255 255 255 / 70%);
+}
+
+.progress::-webkit-slider-thumb {
+  cursor: pointer;
+  width: 17px;
+  height: 17px;
+  margin-top: 0;
+  border: 3px solid #286690;
+  border-radius: 50%;
+  background: $logo_accent;
+  appearance: none;
+}
+
+.progress::-moz-range-thumb {
+  cursor: pointer;
+  padding: 0;
+  width: 17px;
+  height: 17px;
+  margin: 0;
+  border: 3px solid #286690;
+  border-radius: 50%;
+  background: $logo_accent;
+}
+
+.progress-info {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 11px;
+  font-size: 18px;
+  line-height: 22px;
+  gap: 1rem;
+}
+
+.progress-info__title {
+  color: $light;
+}
+
+.progress-info__value {
+  color: $select_bg;
+}
+
+.custom-file {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  justify-content: center;
+  padding: 12px;
+  border: 2px solid #3E9CDC;
+  border-radius: 3px;
+  background: $select_bg;
+  color: $basic_100;
+  gap: 10px;
+}
+
+// .custom-file__input {
+
+//   &:hover {
+//     cursor: pointer;
+//   }
+// }
+
+.custom-file__text {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.custom-file__button {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  width: 100%;
+  max-width: 370px;
+  margin: auto;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 18px;
+}

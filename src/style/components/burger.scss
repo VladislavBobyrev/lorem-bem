@@ -1,0 +1,38 @@
+.burger {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: $light;
+  }
+
+  &::before {
+    top: 7px;
+  }
+
+  &::after {
+    bottom: 7px;
+  }
+}
+
+.burger-active::before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%) rotate(-45deg);
+}
+
+.burger-active::after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+}

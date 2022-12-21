@@ -1,0 +1,96 @@
+@import '../utils/vriable';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z_lg;
+  padding: 33.5px 0;
+  width: 100%;
+  background: $basic_900;
+
+  @media all and (max-width: 768px) {
+    padding: 15px 0;
+  }
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-logotype {
+  display: inline-flex;
+  text-transform: uppercase;
+  font-family: 'Raleway';
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 33px;
+
+  @media all and (max-width: 768px) {
+    font-size: 18px;
+    line-height: 33px;
+  }
+}
+
+.logotype--accent {
+  color: $logo_accent;
+}
+
+.navigation-list {
+  display: flex;
+}
+
+.navigation-link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 123%;
+  color: $light;
+
+  &:hover {
+    color: $brand_700;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .navigation-list {
+    gap: 60px;
+    height: 100%;
+  }
+
+  .navigation-item {
+    display: flex;
+    height: 100%;
+  }
+}
+@media all and (max-width: 768px) {
+  .navigation {
+    position: fixed;
+    top: 63px;
+    right: 0;
+    z-index: $z_xl;
+    width: 100vw;
+    height: 100vh;
+    background: $dark;
+    transform: translateX(100%);
+  }
+
+  .burger-active + .navigation {
+    transform: translateX(0);
+    transition: 0.2s ease-in;
+  }
+
+  .navigation-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .navigation-link {
+    padding: 1rem;
+  }
+}

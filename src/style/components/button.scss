@@ -1,0 +1,36 @@
+.button {
+  border: 1px solid #6F6D7B;
+  border-radius: 4px;
+  background: $light;
+  color: $basic_200;
+}
+
+.button-accent {
+  border: 1px solid $light;
+  background: #3E9CDC;
+  color: $light;
+}
+
+.button-shain {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.5s;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #FFFFFF71, transparent);
+    transform: translateX(-100%) skew(-20deg);
+    transition: transform 0.5s;
+  }
+
+  &:hover::before {
+    transform: translateX(150%);
+    transition-delay: 0.3s;
+  }
+}
