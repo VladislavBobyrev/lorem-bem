@@ -9,7 +9,7 @@ const mode = process.env.NODE_ENV || "development"
 
 module.exports = {
 	mode: mode,
-	entry: resolve("src/js/index.js"),
+	entry: resolve("./src/js/index.js"),
 
 	output: {
 		path: resolve("dist"),
@@ -23,7 +23,7 @@ module.exports = {
 	},
 
 	plugins: [
-		new HtmlWebpackPlugin({ template: "/src/index.html" }),
+		new HtmlWebpackPlugin({ template: "./src/index.html" }),
 		new CopyPlugin({
 			patterns: [
 				{

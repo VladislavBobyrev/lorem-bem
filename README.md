@@ -10,7 +10,7 @@
 -  репозиторий
 
 ```
-git clone https://github.com/VladislavBobyrev/https://github.com/VladislavBobyrev/lorem-bem
+git clone https://github.com/VladislavBobyrev/lorem-bem
 ```
 
 | Действие               | Команда         |
